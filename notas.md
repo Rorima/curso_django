@@ -3,6 +3,20 @@ Estas são todas as minhas anotações feitas do curso Django Web Framework e Dj
 
 Obs: Essas anotações não foram feitas com intuito de ser úteis ou ensinar algo a alguém. Elas são feitas exclusivamente para mim e para o meu aprendizado.
  
+É melhor que tudo esteja escrito em inglês, tando o código quanto as anotações. Como já comecei em português, tentarei manter as notas em português, mas todo o resto em inglês.
+
+
+## Django
+Existe um comando pelo qual você pode consultar todos os comandos do Django, e também entender como eles funcionam. Digite `django-admin --help`, e todos os comandos irão aparecer em sua tela.
+
+#### Criando uma pasta para seu projeto
+Para inicar o seu projeto, digitie o seguinte comando: `django-admin startproject projeto .`. A palavra "projeto" é o nome que você quer dar para o seu projeto. O ponto após ele indica que esta pasta será criada na pasta atual. Se você não colocar o ponto, o Django irá criar uma pasta chamada "projeto" com outra pasta dentro com o mesmo nome. Geralmente só usaremos esse comando para esta exata função, e não veremos mais ele. Usaremos o comando `manage.py` para todas as outras funções.
+ 
+
+#### Iniciando um servidor
+Para iniciar um servidor, basta digitar o comando `python manage.py runserver` no terminal. Este comando vai te dar um link pelo qual você pode acessar o seu site. Para desativar o servidor, basta ir no terminal e apertar ctrl + c. Essa servidor é só para desenvolvimento. Quando você for lançar seu site, você terá que usar outro servidor.
+ 
+
 
 ## Ambientes Virtuais
 Ambientes virtuais são pastas que são utilizadas para guardar um projeto e suas dependências.
