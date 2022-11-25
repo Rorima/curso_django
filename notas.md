@@ -51,6 +51,11 @@ urlpatterns = [
 Com esse código escrito, quando você iniciar seu servidor e clicar no link do seu site, você poderá digitar "/about" e irá ver o que você digitou na função `my_view()`.
  
 
+#### Entendendo melhor request e response
+Utilizamos o protocolo HTTP para navegar na internet. Ele funciona no modo de `request` e `response`. Se o cliente quer ver o site, ele vai fazer uma `request` para aquele site, e o servidor que representa aquele site deve retornar uma `response`.
+
+ 
+
 ## Ambientes Virtuais
 Ambientes virtuais são pastas que são utilizadas para guardar um projeto e suas dependências.
 
