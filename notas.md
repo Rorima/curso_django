@@ -1,6 +1,6 @@
 # Anotações
 Estas são todas as minhas anotações feitas do curso Django Web Framework e Django Rest Framework na Udemy, feito por Luiz Otávio.
-
+ 
 Obs: Essas anotações não foram feitas com intuito de ser úteis ou ensinar algo a alguém. Elas são feitas exclusivamente para mim e para o meu aprendizado.
  
 É melhor que tudo esteja escrito em inglês, tando o código quanto as anotações. Como já comecei em português, tentarei manter as notas em português, mas todo o resto em inglês.
@@ -17,6 +17,39 @@ Para inicar o seu projeto, digitie o seguinte comando: `django-admin startprojec
 Para iniciar um servidor, basta digitar o comando `python manage.py runserver` no terminal. Este comando vai te dar um link pelo qual você pode acessar o seu site. Para desativar o servidor, basta ir no terminal e apertar ctrl + c. Essa servidor é só para desenvolvimento. Quando você for lançar seu site, você terá que usar outro servidor.
  
 
+#### Aprendendo sobre `urls.py`
+O `urls.py` é a porta de entrada da nossa aplicação. Precisamos de um endereço para acessar um site, e no nosso caso, temos um IP por padrão. No `urls.py` você pode configurar os endereços do seu site. Por padrão, esta é a poção de endereço que você tem disponívil no seu site:
+
+```
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+```
+
+A função `path()` recebe uma rota e uma função. A rota é o nome que você deseja, e a função é o que te levará para a parte desejada do site. Essas funções ficam em um app, mas só veremos isso mais adiante, então a função será criada no próprio arquivo `urls.py` para fins de ensino. 
+
+Lembrando que se você for escrever esse código, o seu servidor não pode estar rodando. Se ele estiver, assim que você salvar o arquivo você provavelmente terá um erro. 
+
+Em resumo, a função que você deve criar recebe uma "request HTTP", e ela deve retornar uma "response HTTP". Veremos mais sobre isso no futuro. Para enviar uma resposta, utilizaremos o módulo HTTP do Django, e colocaremos uma string dentro.
+
+Código de exemplo:
+
+```
+from django.http import HttpResponse
+
+
+def my_view(request):
+    return HttpResponse("STRING")
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('about/', my_view),
+]
+```
+
+Com esse código escrito, quando você iniciar seu servidor e clicar no link do seu site, você poderá digitar "/about" e irá ver o que você digitou na função `my_view()`.
+ 
 
 ## Ambientes Virtuais
 Ambientes virtuais são pastas que são utilizadas para guardar um projeto e suas dependências.
