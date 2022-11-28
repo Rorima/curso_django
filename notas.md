@@ -1,4 +1,7 @@
 # Anotações
+Note to self:
+ONLY USE THIS REPOSITORY FOR STUDYING. DON'T USE IT FOR ABSOLUTELY ANYTHING ELSE!!!!!!
+
 Estas são todas as minhas anotações feitas do curso Django Web Framework e Django Rest Framework na Udemy, feito por Luiz Otávio.
  
 Obs: Essas anotações não foram feitas com intuito de ser úteis ou ensinar algo a alguém. Elas são feitas exclusivamente para mim e para o meu aprendizado.
@@ -49,10 +52,34 @@ urlpatterns = [
 ```
 
 Com esse código escrito, quando você iniciar seu servidor e clicar no link do seu site, você poderá digitar "/about" e irá ver o que você digitou na função `my_view()`.
+
+
+
+#### Um pouco sobre os Apps
+Em pouco tempo você vai ver que não é viável fazer tudo no `urls.py`, e para resolver isso, o Django te dá a opção de criar Apps. Nesses apps você pode construir todas as páginas do seu site, e deixar o código no `urls.py` menor e mais bonito.
+
+Criaremos um site de receitas, pois assim iremos aprender bastante sobre como formulários funcionam e como criar um App.
+
+ 
+
+#### Criando um App.
+Abra um novo terminal e digite o seguinte código: `python mange.py startapp recipes`. A palavra "recipes" pode ser substituída pelo nome que você quer dar ao seu App. Note que uma pasta será criada no seu projeto.
+
+
  
 
 #### Entendendo melhor request e response
 Utilizamos o protocolo HTTP para navegar na internet. Ele funciona no modo de `request` e `response`. Se o cliente quer ver o site, ele vai fazer uma `request` para aquele site, e o servidor que representa aquele site deve retornar uma `response`.
+
+Se você clicar em uma página com o botão direito, irá ver a opção *inspecionar*. Clicando nesta opção, uma pequena janela vai abrir contendo algumas informações importantes sobre a página. Nas abas acima, você pode encontrar opções como *Elementos, Consoles, Sources, Network*. Clicando na aba *Network* e atualizando a página você poderá ver os códigos de resposta.
+
+No seguinte [link](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status) você pode encontrar uma página com referências dos códigos de status de respostas HTTP.
+
+No seguinte [link](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods) você pode encontrar uma página com referências dos métodos de requisição HTTP.
+
+Métodos de requisição:
+`GET`: Solicita a representação de um recurso específico;
+`POST`: Submete uma entidade a um recurso específico, frequentemente causando uma mudança no estado do recurso ou efeitos colaterais no servidor.
 
  
 
