@@ -18,11 +18,21 @@ from django.http import HttpResponse
 from django.urls import path
 
 
-def my_view(request):
-    return HttpResponse("STRING")
+def home(request):
+    return HttpResponse("PÁGINA INICIAL")
+
+
+def about(request):
+    return HttpResponse("SOBRE")
+
+
+def contact(request):
+    return HttpResponse("CONTATO")
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', my_view),
+    path('', home),  # Home
+    path('about/', about),  # Sobre
+    path('contact/', contact),  # Contato
 ]
